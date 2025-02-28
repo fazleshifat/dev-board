@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-slate-500 min-h-screen poppinsFont">
+<body class="bg-slate-200 min-h-screen poppinsFont">
     <header class="pt-2 lg:pt-5">
         <div class="navbar bg-slate-100 w-11/12 mx-auto rounded-xl">
             <div class="flex-1 lg:gap-2 cursor-pointer">
@@ -26,7 +26,7 @@
                 <a class="text-xl lg:text-2xl">Dev<span class="font-extrabold">Board</span></a>
 
             </div>
-            <div class="flex-none lg:gap-9">
+            <div id="navButtons" class="flex-none lg:gap-9">
                 <button class="btn">
                     <i class="text-2xl lg:text-4xl fa-solid fa-square-check" style="color: #4d13fb;"></i>
                     <span id="taskComplete" class="text-xl lg:text-2xl font-bold">23</span>
@@ -35,15 +35,18 @@
                     <button class="btn rounded-full bg-slate-300 w-14 lg:w-20 h-14 lg:h-20"><img class="w-8 lg:w-12"
                             src="assets/theme-btn.png" alt=""></button>
                 </div>
+
+                
             </div>
+            <button id="backHomeBtn" class="hidden btn btn-primary text-xl font-bold">Back to Desk</button>
         </div>
     </header>
 
     <!-- Main section -->
-    <main class="w-11/12 gap-5 mx-auto flex">
+    <main class="flex w-11/12 gap-5 mx-auto">
 
-        <!-- Left side tasks -->
-        <section class="w-full lg:w-9/12 mt-5 p-5 bg-slate-100 rounded-2xl">
+        <!-- Main side tasks -->
+        <section id="mainTaskSection" class="w-full lg:w-9/12 mt-5 p-5 bg-slate-100 rounded-2xl">
 
             <!-- Task , Discover Something , Time sections are here -->
             <div>
@@ -56,8 +59,8 @@
                             <span id="taskComplete" class="text-xl lg:text-2xl font-bold">05</span>
                         </div>
                     </button>
-                    <div
-                        class="flex items-center text-start w-full lg:w-5/12 p-2 lg:h-32 rounded-xl lg:gap-5 text-white bg-gradient-to-r from-blue-600 to-cyan-500">
+                    <div id="blogBox"
+                        class="cursor-pointer flex items-center text-start w-full lg:w-5/12 p-2 lg:h-32 rounded-xl lg:gap-5 text-white bg-gradient-to-r from-blue-600 to-cyan-500">
                         <img class="lg:ml-10 w-10 lg:w-auto" src="assets/board.png" alt="" srcset="">
                         <div class="text-start">
                             <p class="text-sm lg:text-2xl">Discover Something</p>
@@ -65,15 +68,21 @@
                         </div>
                     </div>
                     <button class="flex btn w-full lg:w-3/12 lg:h-32 bg-slate-200 rounded-xl lg:gap-5">
-                        <i class="text-xl lg:text-4xl fa-solid fa-square-check bg-slate-100 p-2 lg:p-4 rounded-full"
-                            style="color: #4d13fb;"></i>
+                        
+                        <div class="bg-slate-100 p-2 lg:p-4 rounded-full">
+                            <img class="text-xl lg:text-4xl " src="assets/calender.png" alt="">
+                        </div>
                         <div class="text-start">
-                            <p>Task Assigned</p>
-                            <span id="taskComplete" class="text-xl lg:text-2xl font-bold">05</span>
+                            
+                            <p class="text-xl">Wed ,</p>
+                            <span id="taskComplete" class="text-xl lg:text-2xl font-bold">Jul 18 2025</span>
                         </div>
                     </button>
                 </div>
             </div>
+
+            <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+
 
             <!-- Main Bottom Task -->
 
@@ -89,14 +98,19 @@
                         <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
                     </div>
 
+                    <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+
+
                     <!-- deadLine and submission button -->
                     <div class="flex justify-between space-y-2">
                         <div>
                             <p>Deadline</p>
                             <h1 class="text-xl font-semibold">21 March 2025</h1>
                         </div>
-                        <button class="btn btn-primary text-white text-xl">Completed</button>
+                        <button class="btn btn-primary text-white text-sm">Completed</button>
                     </div>
+
+
                 </div>
 
 
@@ -109,13 +123,16 @@
                         <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
                     </div>
 
+                    <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+
+
                     <!-- deadLine and submission button -->
                     <div class="flex justify-between space-y-2">
                         <div>
                             <p>Deadline</p>
                             <h1 class="text-xl font-semibold">21 March 2025</h1>
                         </div>
-                        <button class="btn btn-primary text-white text-xl">Completed</button>
+                        <button class="btn btn-primary text-white text-sm">Completed</button>
                     </div>
                 </div>
 
@@ -129,13 +146,16 @@
                         <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
                     </div>
 
+                    <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+
+
                     <!-- deadLine and submission button -->
                     <div class="flex justify-between space-y-2">
                         <div>
                             <p>Deadline</p>
                             <h1 class="text-xl font-semibold">21 March 2025</h1>
                         </div>
-                        <button class="btn btn-primary text-white text-xl">Completed</button>
+                        <button class="btn btn-primary text-white text-sm">Completed</button>
                     </div>
                 </div>
 
@@ -148,13 +168,16 @@
                         <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
                     </div>
 
+                    <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+
+
                     <!-- deadLine and submission button -->
                     <div class="flex justify-between space-y-2">
                         <div>
                             <p>Deadline</p>
                             <h1 class="text-xl font-semibold">21 March 2025</h1>
                         </div>
-                        <button class="btn btn-primary text-white text-xl">Completed</button>
+                        <button class="btn btn-primary text-white text-sm">Completed</button>
                     </div>
                 </div>
 
@@ -168,13 +191,16 @@
                         <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
                     </div>
 
+                    <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+
+
                     <!-- deadLine and submission button -->
                     <div class="flex justify-between space-y-2">
                         <div>
                             <p>Deadline</p>
                             <h1 class="text-xl font-semibold">21 March 2025</h1>
                         </div>
-                        <button class="btn btn-primary text-white text-xl">Completed</button>
+                        <button class="btn btn-primary text-white text-sm">Completed</button>
                     </div>
                 </div>
 
@@ -187,13 +213,16 @@
                         <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
                     </div>
 
+                    <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+
+
                     <!-- deadLine and submission button -->
                     <div class="flex justify-between space-y-2">
                         <div>
                             <p>Deadline</p>
                             <h1 class="text-xl font-semibold">21 March 2025</h1>
                         </div>
-                        <button class="btn btn-primary text-white text-xl">Completed</button>
+                        <button class="btn btn-primary text-white text-sm">Completed</button>
                     </div>
                 </div>
 
@@ -207,14 +236,19 @@
         </section>
 
         <!-- Activity log section -->
-        <section class="hidden lg:block w-3/12 mt-5 p-5 bg-slate-100 rounded-2xl space-y-4">
-            <div class="flex text-2xl justify-center gap-3">
-                <i class="fa-solid fa-rotate-right"></i>
-                <h2>Activity Log</h2>
+        <section id="activitySection" class="hidden lg:block w-3/12 mt-5 p-5 bg-slate-100 rounded-2xl space-y-4">
+            <div>
+                <div class="flex text-2xl justify-center gap-3">
+                    <i class="fa-solid fa-rotate-right"></i>
+                    <h2>Activity Log</h2>
+                </div>
+                <div class="flex justify-center">
+                    <button class="btn bg-blue-500 text-white text-xl">Clear History</button>
+                </div>
             </div>
-            <div class="flex justify-center">
-                <button class="btn bg-blue-500 text-white text-xl">Clear History</button>
-            </div>
+
+            <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+
 
             <!-- Activity logs Data -->
 
@@ -222,6 +256,68 @@
                 <button class="btn btn-wide w-11/12 bg-slate-300">Wide</button>
             </div>
         </section>
+
+
+        <!-- Blogs Section -->
+
+        <section id="blogSection" class="hidden mx-auto space-y-8 my-6">
+            <h1 class="text-center text-2xl font-bold">Blogs</h1>
+
+            <div class="bg-white w-full rounded-lg">
+                <div class="p-7 space-y-7">
+                    <h1 class="text-2xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+                    <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore esse accusamus iusto culpa deserunt tempora, aut vero tempore neque distinctio officia maxime doloribus fugiat, ab laudantium animi quae commodi!
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="bg-white w-full rounded-lg">
+                <div class="p-7 space-y-7">
+                    <h1 class="text-2xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+                    <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore esse accusamus iusto culpa deserunt tempora, aut vero tempore neque distinctio officia maxime doloribus fugiat, ab laudantium animi quae commodi!
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="bg-white w-full rounded-lg">
+                <div class="p-7 space-y-7">
+                    <h1 class="text-2xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+                    <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore esse accusamus iusto culpa deserunt tempora, aut vero tempore neque distinctio officia maxime doloribus fugiat, ab laudantium animi quae commodi!
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="bg-white w-full rounded-lg">
+                <div class="p-7 space-y-7">
+                    <h1 class="text-2xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+                    <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore esse accusamus iusto culpa deserunt tempora, aut vero tempore neque distinctio officia maxime doloribus fugiat, ab laudantium animi quae commodi!
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="bg-white w-full rounded-lg">
+                <div class="p-7 space-y-7">
+                    <h1 class="text-2xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
+                    <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore esse accusamus iusto culpa deserunt tempora, aut vero tempore neque distinctio officia maxime doloribus fugiat, ab laudantium animi quae commodi!
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        
     </main>
 
     <body>
@@ -233,7 +329,7 @@
     </footer>
 
     <!-- js -->
-    <script src="scripts/script.js"></script>
+    <script src="scripts/toggle.js"></script>
 </body>
 
 </html>
