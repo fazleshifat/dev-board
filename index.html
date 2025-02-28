@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+
+    <!-- Daisy UI and Tailwind css connected -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-500 min-h-screen poppinsFont">
+    <header class="pt-2 lg:pt-5">
+        <div class="navbar bg-slate-100 w-11/12 mx-auto rounded-xl">
+            <div class="flex-1 lg:gap-2 cursor-pointer">
+                <img class="w-7 lg:w-9 " src="assets/logo.png" alt="" srcset="">
+                <a class="text-xl lg:text-2xl">Dev<span class="font-extrabold">Board</span></a>
+
+            </div>
+            <div class="flex-none lg:gap-9">
+                <button class="btn">
+                    <i class="text-2xl lg:text-4xl fa-solid fa-square-check" style="color: #4d13fb;"></i>
+                    <span id="taskComplete" class="text-xl lg:text-2xl font-bold">23</span>
+                </button>
+                <div class="dropdown dropdown-end rounded-full">
+                    <button class="btn rounded-full bg-slate-300 w-14 lg:w-20 h-14 lg:h-20"><img class="w-8 lg:w-12"
+                            src="assets/theme-btn.png" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main section -->
+    <main class="w-11/12 gap-5 mx-auto flex">
+
+        <!-- Left side tasks -->
+        <section class="w-full lg:w-9/12 mt-5 p-5 bg-slate-100 rounded-2xl">
+
+            <!-- Task , Discover Something , Time sections are here -->
+            <div>
+                <div class="lg:flex justify-between space-y-4 lg:space-y-0 gap-5">
+                    <button class="flex btn w-full lg:w-3/12 lg:h-32 bg-slate-200 rounded-xl lg:gap-5">
+                        <i class="text-xl lg:text-4xl fa-solid fa-square-check bg-slate-100 p-2 lg:p-4 rounded-full"
+                            style="color: #4d13fb;"></i>
+                        <div class="text-start">
+                            <p>Task Assigned</p>
+                            <span id="taskComplete" class="text-xl lg:text-2xl font-bold">05</span>
+                        </div>
+                    </button>
+                    <div
+                        class="flex items-center text-start w-full lg:w-5/12 p-2 lg:h-32 rounded-xl lg:gap-5 text-white bg-gradient-to-r from-blue-600 to-cyan-500">
+                        <img class="lg:ml-10 w-10 lg:w-auto" src="assets/board.png" alt="" srcset="">
+                        <div class="text-start">
+                            <p class="text-sm lg:text-2xl">Discover Something</p>
+                            <span class="text-sm lg:text-xl font-semibold">New Today!</span>
+                        </div>
+                    </div>
+                    <button class="flex btn w-full lg:w-3/12 lg:h-32 bg-slate-200 rounded-xl lg:gap-5">
+                        <i class="text-xl lg:text-4xl fa-solid fa-square-check bg-slate-100 p-2 lg:p-4 rounded-full"
+                            style="color: #4d13fb;"></i>
+                        <div class="text-start">
+                            <p>Task Assigned</p>
+                            <span id="taskComplete" class="text-xl lg:text-2xl font-bold">05</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Bottom Task -->
+
+
+            <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-5">
+
+
+                <!-- First Box -->
+                <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
+                    <button class="btn text-xl">ShopEase</button>
+                    <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+                    <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
+                        <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
+                    </div>
+
+                    <!-- deadLine and submission button -->
+                    <div class="flex justify-between space-y-2">
+                        <div>
+                            <p>Deadline</p>
+                            <h1 class="text-xl font-semibold">21 March 2025</h1>
+                        </div>
+                        <button class="btn btn-primary text-white text-xl">Completed</button>
+                    </div>
+                </div>
+
+
+                <!-- Second Box -->
+
+                <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
+                    <button class="btn text-xl">ShopEase</button>
+                    <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+                    <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
+                        <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
+                    </div>
+
+                    <!-- deadLine and submission button -->
+                    <div class="flex justify-between space-y-2">
+                        <div>
+                            <p>Deadline</p>
+                            <h1 class="text-xl font-semibold">21 March 2025</h1>
+                        </div>
+                        <button class="btn btn-primary text-white text-xl">Completed</button>
+                    </div>
+                </div>
+
+
+                <!-- Third Box -->
+
+                <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
+                    <button class="btn text-xl">ShopEase</button>
+                    <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+                    <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
+                        <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
+                    </div>
+
+                    <!-- deadLine and submission button -->
+                    <div class="flex justify-between space-y-2">
+                        <div>
+                            <p>Deadline</p>
+                            <h1 class="text-xl font-semibold">21 March 2025</h1>
+                        </div>
+                        <button class="btn btn-primary text-white text-xl">Completed</button>
+                    </div>
+                </div>
+
+                <!-- Fourth box -->
+
+                <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
+                    <button class="btn text-xl">ShopEase</button>
+                    <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+                    <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
+                        <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
+                    </div>
+
+                    <!-- deadLine and submission button -->
+                    <div class="flex justify-between space-y-2">
+                        <div>
+                            <p>Deadline</p>
+                            <h1 class="text-xl font-semibold">21 March 2025</h1>
+                        </div>
+                        <button class="btn btn-primary text-white text-xl">Completed</button>
+                    </div>
+                </div>
+
+
+                <!-- Fifth box -->
+
+                <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
+                    <button class="btn text-xl">ShopEase</button>
+                    <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+                    <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
+                        <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
+                    </div>
+
+                    <!-- deadLine and submission button -->
+                    <div class="flex justify-between space-y-2">
+                        <div>
+                            <p>Deadline</p>
+                            <h1 class="text-xl font-semibold">21 March 2025</h1>
+                        </div>
+                        <button class="btn btn-primary text-white text-xl">Completed</button>
+                    </div>
+                </div>
+
+                <!-- Sixth Box -->
+
+                <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
+                    <button class="btn text-xl">ShopEase</button>
+                    <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+                    <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
+                        <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
+                    </div>
+
+                    <!-- deadLine and submission button -->
+                    <div class="flex justify-between space-y-2">
+                        <div>
+                            <p>Deadline</p>
+                            <h1 class="text-xl font-semibold">21 March 2025</h1>
+                        </div>
+                        <button class="btn btn-primary text-white text-xl">Completed</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+
+        </section>
+
+        <!-- Activity log section -->
+        <section class="hidden lg:block w-3/12 mt-5 p-5 bg-slate-100 rounded-2xl space-y-4">
+            <div class="flex text-2xl justify-center gap-3">
+                <i class="fa-solid fa-rotate-right"></i>
+                <h2>Activity Log</h2>
+            </div>
+            <div class="flex justify-center">
+                <button class="btn bg-blue-500 text-white text-xl">Clear History</button>
+            </div>
+
+            <!-- Activity logs Data -->
+
+            <div class="flex justify-center ">
+                <button class="btn btn-wide w-11/12 bg-slate-300">Wide</button>
+            </div>
+        </section>
+    </main>
+
+    <body>
+
+    </body>
+
+    <footer>
+
+    </footer>
+
+    <!-- js -->
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
