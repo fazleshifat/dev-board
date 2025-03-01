@@ -6,6 +6,7 @@ document.getElementById('blogBox')
         mainTaskSection.classList.add('hidden');
         const activitySection = document.getElementById('activitySection');
         activitySection.classList.remove('lg:block');
+        activitySection.classList.add('hidden');
         const backHomeBtn = document.getElementById('backHomeBtn');
         backHomeBtn.classList.remove('hidden');
         const navButtons = document.getElementById('navButtons');
@@ -24,6 +25,12 @@ document.getElementById('clearHistory')
         activityContainer.innerHTML = '';
 
     })
+document.getElementById('clearHistoryMobile')
+    .addEventListener('click', function () {
+        const activityContainer = document.getElementById('activityContainer');
+        activityContainer.innerHTML = '';
+
+    })
 
 
 // function of changing background theme
@@ -36,13 +43,6 @@ document.getElementById('themeButton')
         let newTheme = `rgb(${firstRgb},${secondRgb},${thirdRgb})`;
         document.getElementById('body').style.backgroundColor = newTheme;
 
-        // Tuesday
-        console.log(getUTCDay());
-        // Expected output: 2
-
-        // Wednesday
-        console.log(date2.getUTCDay());
-        // Expected output: 3
     })
 
 

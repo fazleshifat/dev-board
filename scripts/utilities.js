@@ -49,9 +49,9 @@ for (const btn of btnComplete) {
             const activityContainer = document.getElementById('activityContainer');
 
 
-            // taske complete in activity log area
+            // task complete in activity log area
             const newBtn = document.createElement('button');
-            newBtn.classList.add('btn', 'h-28', 'w-full', 'bg-slate-200', 'text-xl', 'text-start', 'rounded-xl');
+            newBtn.classList.add('btn', 'h-28', 'w-full', 'bg-slate-200','text-sm' ,'lg:text-xl', 'text-start', 'rounded-xl');
             const currentTime = new Date().toLocaleTimeString();
             newBtn.innerText = 'You have completed the task ' + issueTitle + ' at ' + currentTime;
 
