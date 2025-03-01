@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-slate-200 min-h-screen poppinsFont">
+<body id="body" class=" min-h-screen poppinsFont">
     <header class="pt-2 lg:pt-5">
         <div class="navbar bg-slate-100 w-11/12 mx-auto rounded-xl">
             <div class="flex-1 lg:gap-2 cursor-pointer">
@@ -32,8 +32,8 @@
                     <span id="taskComplete" class="text-xl lg:text-2xl font-bold">23</span>
                 </button>
                 <div class="dropdown dropdown-end rounded-full">
-                    <button class="btn rounded-full bg-slate-300 w-14 lg:w-20 h-14 lg:h-20"><img class="w-8 lg:w-12"
-                            src="assets/theme-btn.png" alt=""></button>
+                    <button id="themeButton" class="btn rounded-full bg-slate-300 w-14 lg:w-20 h-14 lg:h-20"><img
+                            class="w-8 lg:w-12" src="assets/theme-btn.png" alt=""></button>
                 </div>
 
 
@@ -56,7 +56,7 @@
                             style="color: #4d13fb;"></i>
                         <div class="text-start">
                             <p>Task Assigned</p>
-                            <span id="taskAssigned" class="text-xl lg:text-2xl font-bold">5</span>
+                            <span id="taskAssigned" class="text-xl lg:text-2xl font-bold">6</span>
                         </div>
                     </button>
                     <div id="blogBox"
@@ -74,11 +74,33 @@
                         </div>
                         <div class="text-start">
 
-                            <p class="text-xl">Wed ,</p>
-                            <span id="taskComplete" class="text-xl lg:text-2xl font-bold">Jul 18 2025</span>
+                            <p class="text-xl"></p>
+                            <span id="taskDate" class="text-xl lg:text-xl font-bold"></span>
                         </div>
                     </button>
+
+
                 </div>
+                <!-- <div id="activitySection"
+                    class="block flex-col btn lg:hidden h-auto w-full mt-5 bg-slate-200 rounded-2xl">
+                    <div class="">
+                        <div class="my-6 flex text-2xl justify-center gap-3">
+                            <img src="assets/activity.png" alt="" srcset="">
+                            <h2>Activity Log</h2>
+                        </div>
+
+                    </div>
+                   
+
+                    <div id="activityContainer" class="gap-6 flex flex-col justify-center">
+
+                    </div>
+                </div>
+                <div class="flex justify-center ">
+                    <button id="clearHistory" class="flex justify-center btn bg-blue-500 text-white text-xl ">Clear
+                        History</button>
+                </div>
+                <hr class="w-full border-t-2 border-gray-300 border-dashed my-4"> -->
             </div>
 
             <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
@@ -91,7 +113,7 @@
 
 
                 <!-- First Box -->
-                <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
+                <div id="taskContainer" class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
                     <button class="btn text-xl">ShopEase</button>
                     <h1 class="issueName text-2xl font-semibold">Fix Mobile Button Issue</h1>
                     <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
@@ -163,7 +185,7 @@
 
                 <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
                     <button class="btn text-xl">ShopEase</button>
-                    <h1 class="issueName text-2xl font-semibold">Add new emoji</h1>
+                    <h1 class="issueName text-2xl font-semibold">Add new emoji 🤲</h1>
                     <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
                         <p class="text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
                     </div>
@@ -239,11 +261,11 @@
         <section id="activitySection" class="hidden lg:block w-3/12 mt-5 p-5 bg-slate-100 rounded-2xl space-y-4">
             <div>
                 <div class="flex text-2xl justify-center gap-3">
-                    <i class="fa-solid fa-rotate-right"></i>
+                    <img src="assets/activity.png" alt="" srcset="">
                     <h2>Activity Log</h2>
                 </div>
-                <div class="flex justify-center">
-                    <button class="btn bg-blue-500 text-white text-xl">Clear History</button>
+                <div class="flex justify-center my-5">
+                    <button id="clearHistory" class="btn bg-blue-500 text-white text-xl ">Clear History</button>
                 </div>
             </div>
 
@@ -252,8 +274,8 @@
 
             <!-- Activity logs Data -->
 
-            <div id="activityContainer" class="flex justify-center ">
-                <button class="h-32 w-11/12 bg-slate-300 rounded-xl">Wide</button>
+            <div id="activityContainer" class="flex flex-col justify-center space-y-5">
+
             </div>
         </section>
 
