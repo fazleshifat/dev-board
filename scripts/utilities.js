@@ -1,5 +1,12 @@
-const newDate = document.getElementById('taskDate').innerText = new Date().toUTCString();
-console.log(newDate)
+const newDate = new Date().toDateString();
+const splittedDate = newDate.split(' ');
+const currentDay = splittedDate[0]+',';
+const currentDate= splittedDate[1]+' '+ splittedDate[2]+ ' ' +splittedDate[3];
+document.getElementById('taskDay').innerText = currentDay;
+document.getElementById('taskDate').innerText = currentDate;
+console.log(newDate);
+console.log(currentDay)
+console.log(currentDate)
 
 
 const btnComplete = document.querySelectorAll('.btnComplete');
@@ -33,6 +40,8 @@ for (const btn of btnComplete) {
             let newTaskComplete = document.getElementById('taskComplete').innerText = convertedTaskComplete;
 
 
+            // Activity log activities
+
             const activityIssues = document.querySelectorAll('.issueName');
 
             const issueTitle = event.target.parentNode.parentNode.querySelector('h1').innerText;
@@ -40,11 +49,11 @@ for (const btn of btnComplete) {
             const activityContainer = document.getElementById('activityContainer');
 
 
-            // activity log area
+            // taske complete in activity log area
             const newBtn = document.createElement('button');
             newBtn.classList.add('btn', 'h-28', 'w-full', 'bg-slate-200', 'text-xl', 'text-start', 'rounded-xl');
-            const curennTime = new Date().toLocaleTimeString();
-            newBtn.innerText = 'You have completed the task ' + issueTitle + ' at ' + curennTime;
+            const currentTime = new Date().toLocaleTimeString();
+            newBtn.innerText = 'You have completed the task ' + issueTitle + ' at ' + currentTime;
 
             activityContainer.appendChild(newBtn)
 

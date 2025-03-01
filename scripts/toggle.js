@@ -25,20 +25,32 @@ document.getElementById('clearHistory')
 
     })
 
-// theme
 
-const bgTheme = ['bg-black', 'bg-green', 'bg-yellow']
+// function of changing background theme
+
+document.getElementById('themeButton')
+    .addEventListener('click', function () {
+        let firstRgb = parseInt((Math.random() * 160));
+        let secondRgb = parseInt((Math.random() * 263));
+        let thirdRgb = parseInt((Math.random() * 288));
+        let newTheme = `rgb(${firstRgb},${secondRgb},${thirdRgb})`;
+        document.getElementById('body').style.backgroundColor = newTheme;
+
+        // Tuesday
+        console.log(getUTCDay());
+        // Expected output: 2
+
+        // Wednesday
+        console.log(date2.getUTCDay());
+        // Expected output: 3
+    })
 
 
-// document.getElementById('themeButton')
-//     .addEventListener('click', function (event) {
-//         for (const theme of bgTheme) {
-//             const currentTheme = document.getElementById('body');
-//             let newTheme = currentTheme.classList.add(theme);
-//             bgTheme.shift(newTheme);
-//             console.log(bgTheme)
-//             event.target.newTheme
-//             newTheme = 
-//         }
-//     })
+
+// activity log for mobile (button toggle)
+
+document.getElementById('activitySectionMobile')
+.addEventListener('click',function(){
+    document.getElementById('activitySection').classList.remove('hidden');
+})
 
