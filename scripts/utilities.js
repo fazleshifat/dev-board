@@ -1,46 +1,45 @@
+// current date and time for date section and activity log section
 const newDate = new Date().toDateString();
 const splittedDate = newDate.split(' ');
 const currentDay = splittedDate[0]+',';
 const currentDate= splittedDate[1]+' '+ splittedDate[2]+ ' ' +splittedDate[3];
 document.getElementById('taskDay').innerText = currentDay;
 document.getElementById('taskDate').innerText = currentDate;
-console.log(newDate);
-console.log(currentDay)
-console.log(currentDate)
 
 
+// complete button of all (tasks div)
 const btnComplete = document.querySelectorAll('.btnComplete');
-let taskAssigned = document.getElementById('taskAssigned').innerText;
-let convertedTaskAssigned = parseInt(taskAssigned);
+let taskAssigned = document.getElementById('taskAssigned');
+let convertedTaskAssigned = parseInt(taskAssigned.innerText);
 let taskComplete = document.getElementById('taskComplete').innerText;
 let convertedTaskComplete = parseInt(taskComplete);
 
+// container of activity log
 const activityContainer = document.getElementById('activityContainer');
 
 
-
+// loop for accessing each button from all (tasks div)
 for (const btn of btnComplete) {
     btn.addEventListener('click', function (event) {
 
         if (convertedTaskAssigned > 0 && convertedTaskComplete > 1) {
+
             convertedTaskAssigned--;
-            let newTaskAssigned = document.getElementById('taskAssigned').innerText = convertedTaskAssigned;
-            alert('Board Updated Sucessfully!');
+            document.getElementById('taskAssigned').innerText = convertedTaskAssigned;
 
-
+            convertedTaskComplete++;
+            document.getElementById('taskComplete').innerText = convertedTaskComplete;
+            alert('Board Updated Successfully!');
 
 
             btn.classList.add('btn-disabled');
 
-            // const activityContainer = document.getElementById('activityContainer');
-            // activityContainer.classList.remove('hidden')
 
 
-            convertedTaskComplete++;
-            let newTaskComplete = document.getElementById('taskComplete').innerText = convertedTaskComplete;
+            
 
 
-            // Activity log activities
+            // Activity log (activities)
 
             const activityIssues = document.querySelectorAll('.issueName');
 
@@ -60,7 +59,6 @@ for (const btn of btnComplete) {
             if(convertedTaskAssigned === 0){
                 alert('Congrats!!! You have completed all the current task')
             }
-
 
 
         }

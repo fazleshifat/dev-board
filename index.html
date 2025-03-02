@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- font awsome -->
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,9 +18,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
+
+<!-- body section start from here -->
+
 <body id="body" class=" min-h-screen poppinsFont">
     <header class="pt-2 lg:pt-5">
-        <div class="navbar bg-slate-100 w-11/12 mx-auto rounded-xl">
+        <div class="px-4 navbar bg-slate-100 w-11/12 mx-auto rounded-xl">
             <div class="flex-1 gap-2 cursor-pointer">
                 <img class="w-7 lg:w-9 " src="assets/logo.png" alt="" srcset="">
                 <a class="text-xl lg:text-2xl">Dev<span class="font-extrabold">Board</span></a>
@@ -38,7 +42,7 @@
 
 
             </div>
-            <button id="backHomeBtn" class="hidden btn btn-primary text-xl font-bold">Back to Desk</button>
+            <button id="backHomeBtn" class="my-4 hidden btn btn-primary text-xl font-bold">Back to Desk</button>
         </div>
     </header>
 
@@ -58,7 +62,7 @@
                             style="color: #4d13fb;"></i>
                         <div class="text-start">
                             <p>Task Assigned</p>
-                            <span id="taskAssigned" class="text-xl lg:text-2xl font-bold">06</span>
+                            <span id="taskAssigned" class="text-xl lg:text-2xl font-bold">6</span>
                         </div>
                     </button>
 
@@ -73,46 +77,21 @@
                     </div>
 
                     <!-- Current Date -->
-                    <button class="flex btn w-full h-20 lg:w-3/12 lg:h-32 bg-slate-200 rounded-xl lg:gap-8">
+                    <button class="flex btn w-full h-20 lg:w-3/12 lg:h-32 bg-slate-200 rounded-xl gap-1 lg:gap-3">
 
                         <div class="bg-slate-100 p-2 lg:p-4 rounded-full">
-                            <img class="text-xl lg:text-4xl " src="assets/calender.png" alt="">
+                            <img class="text-xl lg:text-2xl " src="assets/calender.png" alt="">
                         </div>
                         <div class="text-start">
 
-                            <p id="taskDay" class="font-normal text-sm"></p>
-                            <span id="taskDate" class="text-sm lg:text-xl font-bold"></span>
+                            <p id="taskDay" class="font-normal text-sm lg:text-2xl"></p>
+                            <span id="taskDate" class="text-sm lg:text-2xl font-bold"></span>
                         </div>
                     </button>
 
 
                 </div>
 
-
-                <!-- Activity log for mobile -->
-                <!-- <div class="lg:hidden space-y-4">
-                    <div id="activitySectionMobile"
-                        class="btn block flex-col h-20 w-full mt-5 bg-slate-200 rounded-2xl">
-                        <div class="">
-                            <div class="my-6 flex text-2xl justify-center gap-3">
-                                <img src="assets/activity.png" alt="" srcset="">
-                                <h2>Activity Log</h2>
-                            </div>
-
-                        </div>
-
-
-                        <div id="activityContainerMobile" class="gap-6 flex flex-col justify-center">
-
-                        </div>
-                    </div>
-                    <div class="flex justify-center ">
-                        <button id="clearHistoryMobile"
-                            class="flex justify-center btn bg-blue-500 text-white text-xl ">Clear
-                            History</button>
-                    </div>
-                    <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
-                </div> -->
             </div>
 
             <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
@@ -126,10 +105,11 @@
 
                 <!-- First Box -->
                 <div id="taskContainer" class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
-                    <button class="btn text-sm lg:text-xl">ShopEase</button>
+                    <button class="btn text-sm lg:text-xl">Bug</button>
                     <h1 class="issueName text-xl lg:text-2xl font-semibold">Fix Mobile Button Issue</h1>
                     <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
-                        <p class="text-sm lg:text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
+                        <p class="text-sm lg:text-xl py-8 px-5 overflow-y-auto h-32">Debug using Chrome DevTools,check
+                            for overlappng</p>
                     </div>
 
                     <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
@@ -151,10 +131,12 @@
                 <!-- Second Box -->
 
                 <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
-                    <button class="btn text-sm lg:text-xl">ShopEase</button>
+                    <button class="btn text-sm lg:text-xl">ThemeChanging</button>
                     <h1 class="issueName text-xl lg:text-2xl font-semibold">Add Dark Mode</h1>
                     <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
-                        <p class="text-sm lg:text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
+                        <p class="text-sm lg:text-xl py-8 px-5 overflow-y-auto h-32">Access the body then generate
+                            random number put it into
+                            RGB Theme</p>
                     </div>
 
                     <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
@@ -164,7 +146,7 @@
                     <div class="flex justify-between space-y-2">
                         <div>
                             <p class="text-sm lg:text-xl">Deadline</p>
-                            <h1 class="text-sm lg:text-xl font-semibold">21 March 2025</h1>
+                            <h1 class="text-sm lg:text-xl font-semibold">28 April 2025</h1>
                         </div>
                         <button class="btnComplete btn btn-primary text-white text-xs lg:text-sm">Completed</button>
                     </div>
@@ -176,10 +158,12 @@
                 <!-- Third Box -->
 
                 <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
-                    <button class="btn text-sm lg:text-xl">ShopEase</button>
+                    <button class="btn text-sm lg:text-xl">Responsive</button>
                     <h1 class="issueName text-xl lg:text-2xl font-semibold">Optimize Home Page</h1>
                     <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
-                        <p class="text-sm lg:text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
+                        <p class="text-sm lg:text-xl py-8 px-5 overflow-y-auto h-32">Use different breakpoint,implement
+                            some design to
+                            optimize</p>
                     </div>
 
                     <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
@@ -189,7 +173,7 @@
                     <div class="flex justify-between space-y-2">
                         <div>
                             <p class="text-sm lg:text-xl">Deadline</p>
-                            <h1 class="text-sm lg:text-xl font-semibold">21 March 2025</h1>
+                            <h1 class="text-sm lg:text-xl font-semibold">17 March 2025</h1>
                         </div>
                         <button class="btnComplete btn btn-primary text-white text-xs lg:text-sm">Completed</button>
                     </div>
@@ -200,10 +184,12 @@
                 <!-- Fourth box -->
 
                 <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
-                    <button class="btn text-sm lg:text-xl">ShopEase</button>
+                    <button class="btn text-sm lg:text-xl">Feature Request</button>
                     <h1 class="issueName text-xl lg:text-2xl font-semibold">Add new emoji 🤲</h1>
                     <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
-                        <p class="text-sm lg:text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
+                        <p class="text-sm lg:text-xl py-8 px-5 overflow-y-auto h-32">Collect link of emoji from
+                            different site, implement
+                            them as link or export</p>
                     </div>
 
                     <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
@@ -213,7 +199,7 @@
                     <div class="flex justify-between space-y-2">
                         <div>
                             <p class="text-sm lg:text-xl">Deadline</p>
-                            <h1 class="text-sm lg:text-xl font-semibold">21 March 2025</h1>
+                            <h1 class="text-sm lg:text-xl font-semibold">16 May 2025</h1>
                         </div>
                         <button class="btnComplete btn btn-primary text-white text-xs lg:text-sm">Completed</button>
                     </div>
@@ -225,10 +211,12 @@
                 <!-- Fifth box -->
 
                 <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
-                    <button class="btn text-sm lg:text-xl">ShopEase</button>
+                    <button class="btn text-sm lg:text-xl">Function</button>
                     <h1 class="issueName text-xl lg:text-2xl font-semibold">Integrate OpenAI API</h1>
                     <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
-                        <p class="text-sm lg:text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
+                        <p class="text-sm lg:text-xl py-8 px-5 overflow-y-auto h-32">Working to implement some
+                            background features from
+                            OpenAI API</p>
                     </div>
 
                     <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
@@ -238,7 +226,7 @@
                     <div class="flex justify-between space-y-2">
                         <div>
                             <p class="text-sm lg:text-xl">Deadline</p>
-                            <h1 class="text-sm lg:text-xl font-semibold">21 March 2025</h1>
+                            <h1 class="text-sm lg:text-xl font-semibold">10 April 2025</h1>
                         </div>
                         <button class="btnComplete btn btn-primary text-white text-xs lg:text-sm">Completed</button>
                     </div>
@@ -249,10 +237,12 @@
                 <!-- Sixth Box -->
 
                 <div class="p-8 space-y-4 h-auto bg-slate-200 rounded-xl">
-                    <button class="btn text-sm lg:text-xl">ShopEase</button>
+                    <button class="btn text-sm lg:text-xl">Features</button>
                     <h1 class="issueName text-xl lg:text-2xl font-semibold">Improve Job Searching</h1>
                     <div class="flex w-auto h-auto rounded-xl gap-5  bg-white">
-                        <p class="text-sm lg:text-xl py-8 px-5">Debug using Chrome DevTools,check for overlappng</p>
+                        <p class="text-sm lg:text-xl py-8 px-5 overflow-y-auto h-32">Applying some new
+                            method,implementing features to
+                            improve the quality</p>
                     </div>
 
                     <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
@@ -262,7 +252,7 @@
                     <div class="flex justify-between space-y-2">
                         <div>
                             <p class="text-sm lg:text-xl">Deadline</p>
-                            <h1 class="text-sm lg:text-xl font-semibold">21 March 2025</h1>
+                            <h1 class="text-sm lg:text-xl font-semibold">21 May 2025</h1>
                         </div>
                         <button class="btnComplete btn btn-primary text-white text-xs lg:text-sm">Completed</button>
                     </div>
@@ -280,14 +270,16 @@
         </section>
 
         <!-- Activity log section for Large Device-->
-        <section id="activitySection" class="text-center space-y-5 lg:space-y-11 lg:block w-full lg:w-3/12 mt-5 p-5 bg-slate-100 rounded-2xl">
+        <section id="activitySection"
+            class="text-center space-y-5 lg:space-y-11 lg:block w-full lg:w-3/12 mt-5 p-5 bg-slate-100 rounded-2xl">
             <div>
                 <div class="flex text-2xl justify-center gap-3">
                     <img class="w-5 lg:w-auto" src="assets/activity.png" alt="" srcset="">
                     <h2 class="text-sm lg:text-xl">Activity Log</h2>
                 </div>
                 <div class="flex justify-center my-5">
-                    <button id="clearHistory" class="hidden lg:block btn bg-blue-500 text-white text-xl ">Clear History</button>
+                    <button id="clearHistory" class="hidden lg:block btn bg-blue-500 text-white text-xl ">Clear
+                        History</button>
                 </div>
             </div>
 
@@ -300,7 +292,8 @@
 
             </div>
 
-            <button id="clearHistoryMobile" class="mx-auto block lg:hidden btn bg-blue-500 text-white text-sm lg:text-xl ">Clear History</button>
+            <button id="clearHistoryMobile"
+                class="mx-auto block lg:hidden btn bg-blue-500 text-white text-sm lg:text-xl ">Clear History</button>
         </section>
 
 
@@ -309,70 +302,100 @@
         <section id="blogSection" class="hidden mx-auto space-y-8 my-6">
             <h1 class="text-center text-2xl font-bold">Blogs</h1>
 
-            <div class="bg-white w-full rounded-lg">
+            <div class="bg-slate-100 w-full rounded-lg">
                 <div class="p-7 space-y-7">
                     <h1 class="text-2xl font-bold">Question-1: What are the different ways to select an element in the
                         DOM?</h1>
                     <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
-                    <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore esse
-                        accusamus iusto culpa deserunt tempora, aut vero tempore neque distinctio officia maxime
-                        doloribus fugiat, ab laudantium animi quae commodi!
+                    <p class="text-xl font-semibold">There are to many different way to select element of in the
+                        DOM.Here it is <br>
+                        1.getElementById() <br>
+                        2.getElementsByClassname() <br>
+                        3.getElementByName() <br>
+                        4.getElementByTagName() <br>
+                        5.querySelector() <br>
+                        6.querySelectorAll() <br>
+                        those all way has there different usage,it's depend on the condition and situation that how to
+                        use them.
                     </p>
                 </div>
             </div>
 
 
 
-            <div class="bg-white w-full rounded-lg">
+            <div class="bg-slate-100 w-full rounded-lg">
                 <div class="p-7 space-y-7">
-                    <h1 class="text-2xl font-bold">Question-1: What are the different ways to select an element in the
-                        DOM?</h1>
+                    <h1 class="text-2xl font-bold">Question-2: What is the difference between innerHTML, innerText, and
+                        textContent ?</h1>
                     <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
-                    <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore esse
-                        accusamus iusto culpa deserunt tempora, aut vero tempore neque distinctio officia maxime
-                        doloribus fugiat, ab laudantium animi quae commodi!
+                    <p class="text-xl font-semibold">
+                        The difference between three of them is <br>
+                        1.innerHTML gives the whole structure of and html content with all tags and text. <br>
+                        2.innerText gives the visible text only from the specific html tags and element which has been
+                        defined.<br>
+                        3.textContent gives the whole html structure with all tags,elements, all visible and invisible
+                        text. <br>
+                        There also three different use of this three method.
                     </p>
                 </div>
             </div>
 
 
 
-            <div class="bg-white w-full rounded-lg">
+            <div class="bg-slate-100 w-full rounded-lg">
                 <div class="p-7 space-y-7">
-                    <h1 class="text-2xl font-bold">Question-1: What are the different ways to select an element in the
-                        DOM?</h1>
+                    <h1 class="text-2xl font-bold">Question-3: What is event delegation in the DOM?</h1>
                     <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
-                    <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore esse
-                        accusamus iusto culpa deserunt tempora, aut vero tempore neque distinctio officia maxime
-                        doloribus fugiat, ab laudantium animi quae commodi!
+                    <p class="text-xl font-semibold"> In JavaScript there is a method call event delegation which is
+                        used to handle event.We use it on a parent div to handle the activities of an child element by
+                        target method. <br>
+                        It's basically used in some way instead of event listener.
                     </p>
                 </div>
             </div>
 
 
 
-            <div class="bg-white w-full rounded-lg">
+            <div class="bg-slate-100 w-full rounded-lg">
                 <div class="p-7 space-y-7">
-                    <h1 class="text-2xl font-bold">Question-1: What are the different ways to select an element in the
-                        DOM?</h1>
+                    <h1 class="text-2xl font-bold">Question-4: What is event bubbling in the DOM?</h1>
                     <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
-                    <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore esse
-                        accusamus iusto culpa deserunt tempora, aut vero tempore neque distinctio officia maxime
-                        doloribus fugiat, ab laudantium animi quae commodi!
+                    <p class="text-xl font-semibold">Event bubbling is a method in the JavaScript DOM where if we click
+                        on a child div, first it
+                        will select the targeted element that means the child element, <br>
+                        after that it will select the
+                        parent div,after that it will select the second parent div,then it will select the third parent
+                        div.LIKE A LOOP <br>
+                        it will select from the last div(selected element) to the main div.It's call
+                        bubbling.
                     </p>
                 </div>
             </div>
 
 
 
-            <div class="bg-white w-full rounded-lg">
+            <div class="bg-slate-100 w-full rounded-lg">
                 <div class="p-7 space-y-7">
-                    <h1 class="text-2xl font-bold">Question-1: What are the different ways to select an element in the
-                        DOM?</h1>
+                    <h1 class="text-2xl font-bold">Question-5: How do you create, add, and remove elements using
+                        JavaScript?</h1>
                     <hr class="w-full border-t-2 border-gray-300 border-dashed my-4">
-                    <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam inventore esse
-                        accusamus iusto culpa deserunt tempora, aut vero tempore neque distinctio officia maxime
-                        doloribus fugiat, ab laudantium animi quae commodi!
+                    <p class="text-xl font-semibold">We can create,add and remove element to Javascript using DOM. <br>
+                        There has so many different way to do those thing by using DOM. Here it is- <br> <br>
+
+                        <span class="text-2xl">Create Element-</span> <br>
+                        1.document.createElement() <br> <br>
+
+
+                        <span class="text-2xl">Adding Element-</span> <br>
+                        1.appendChild() (to append a child element) <br>
+                        2.append() <br>
+                        3.innerHTML <br> <br>
+
+                        <span class="text-2xl">Remove Element-</span> <br>
+                        1.removeChild() (to remove a target child div from a parent div) <br>
+                        2. innerHTML = " " (by the empty string we can remove content from the target div) <br>
+
+
                     </p>
                 </div>
             </div>
@@ -389,7 +412,8 @@
 
     </footer>
 
-    <!-- js -->
+
+    <!-- all Javascript files connected here-->
     <script src="scripts/toggle.js"></script>
     <script src="scripts/utilities.js"></script>
 </body>

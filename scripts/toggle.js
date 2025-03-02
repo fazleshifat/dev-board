@@ -1,3 +1,5 @@
+// while clicked blogSection Button
+
 document.getElementById('blogBox')
     .addEventListener('click', function () {
         const blogSection = document.getElementById('blogSection');
@@ -19,18 +21,18 @@ document.getElementById('backHomeBtn')
         window.location.href = "index.html";
     });
 
+
+// clear history
+
+
 document.getElementById('clearHistory')
     .addEventListener('click', function () {
         const activityContainer = document.getElementById('activityContainer');
         activityContainer.innerHTML = '';
 
-    })
-document.getElementById('clearHistoryMobile')
-    .addEventListener('click', function () {
-        const activityContainer = document.getElementById('activityContainer');
-        activityContainer.innerHTML = '';
 
     })
+
 
 
 // function of changing background theme
@@ -47,10 +49,10 @@ document.getElementById('themeButton')
 
 
 
-// activity log for mobile (button toggle)
+// activity log for mobile (button)
 
 document.getElementById('activitySectionMobile')
-.addEventListener('click',function(){
-    document.getElementById('activitySection').classList.remove('hidden');
-})
+    .addEventListener('click', function () {
+        document.getElementById('activitySection').classList.remove('hidden');
+    })
 
